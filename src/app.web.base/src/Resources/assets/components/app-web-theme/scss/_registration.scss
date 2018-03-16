@@ -1,0 +1,50 @@
+.registration {
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+
+  &__controls {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  &__control {
+    font-size: 14px;
+  }
+
+  &__separator {
+    color: #f5f5f5;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__sign_in_label {
+    padding: 10px;
+    color: #999;
+  }
+
+  &__sign_in_link {
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .login {
+    &__box {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}

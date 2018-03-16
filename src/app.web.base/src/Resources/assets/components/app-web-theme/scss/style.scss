@@ -1,0 +1,31 @@
+/*
+ *
+ * App - Web theme
+ * Version 1.0
+ *
+ */
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+// Customized bootstrap
+@import "bootstrap-custom-variables";
+@import "bootstrap";
+
+// Font Awesome
+@import "../../../../../../../../node_modules/font-awesome/scss/font-awesome.scss";
+
+// Custom values
+@import "variables";
+
+// Common components
+@import "breadcrumb";
+@import "common";
+@import "footer";
+@import "login";
+@import "menubar";
+@import "pagination";
+@import "panel";
+@import "section";
+@import "topbar";
+

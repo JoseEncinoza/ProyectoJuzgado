@@ -1,0 +1,49 @@
+.login {
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+
+  &__credentials {
+    margin-bottom: 30px;
+  }
+
+  &__credential {
+    font-size: 14px;
+  }
+
+  &__separator {
+    color: #f5f5f5;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__create_account_label {
+    padding: 10px;
+    color: #999;
+  }
+
+  &__create_account_link {
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .login {
+    &__box {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+dna_admin_base:
+    resource: "@DnaAdminBaseBundle/Controller/"
+    type:     annotation
+
+dna_admin_crontask:
+    resource: "@DnaAdminCrontaskBundle/Controller/"
+    type:     annotation
+
+dna_admin_setting:
+    resource: "@DnaAdminSettingBundle/Controller/"
+    type:     annotation
+
+dna_admin_template:
+    resource: "@DnaAdminTemplateBundle/Controller/"
+    type:     annotation
+
+dna_admin_notification:
+    resource: "@DnaAdminNotificationBundle/Controller/"
+    type:     annotation
+
+dna_admin_message:
+    resource: "@DnaAdminMessageBundle/Controller/"
+    type:     annotation
+
+dna_admin_audit:
+    resource: "@DnaAdminAuditBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_vehiculo:
+    resource: "@JuzgadoAdminVehiculoBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_persona:
+    resource: "@JuzgadoAdminPersonaBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_empleado:
+    resource: "@JuzgadoAdminEmpleadoBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_expediente:
+    resource: "@JuzgadoAdminExpedienteBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_acta:
+    resource: "@JuzgadoAdminActaBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_feriado:
+    resource: "@JuzgadoAdminFeriadoBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_notificacion:
+    resource: "@JuzgadoAdminNotificacionBundle/Controller/"
+    type:     annotation
+
+juzgado_admin_sentencia:
+    resource: "@JuzgadoAdminSentenciaBundle/Controller/"
+    type:     annotation
+
+dna_web_base:
+    resource: "@DnaWebBaseBundle/Controller/"
+    type:     annotation
+
+#juzgado_web_vehiculo:
+#    resource: "@JuzgadoWebVehiculoBundle/Controller/"
+#    type:     annotation
+#
+#juzgado_web_persona:
+#    resource: "@JuzgadoWebPersonaBundle/Controller/"
+#    type:     annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+# redirecting the root
+#root:
+#    path: /
+#    defaults:
+#        _controller: FrameworkBundle:Redirect:urlRedirect
+#        path: /%locale%
+#        permanent: true

@@ -1,0 +1,48 @@
+{
+  "name": "e-binaria.dna",
+  "version": "1.0.0",
+  "description": "DNA Platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --display-modules",
+    "start": "webpack-dev-server",
+    "watch": "webpack --watch",
+    "publish": "webpack -p",
+    "update-database": "php bin/console doctrine:schema:update --dump-sql --force"
+  },
+  "author": "e-binaria",
+  "license": "ISC",
+  "private": "true",
+  "devDependencies": {
+    "config": "^1.25.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^4.0.0",
+    "glob": "^7.1.1",
+    "node-sass": "^4.5.0",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.8",
+    "ajv": "^5.1.5",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "blueimp-gallery": "^2.25.0",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-datetimepicker-npm": "^4.17.37-npm",
+    "bootstrap-sass": "^3.3.7",
+    "ez-plus": "^1.2.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "2.1.4",
+    "jquery-slimscroll": "^1.3.8",
+    "jquery-ui-bundle": "^1.12.1",
+    "js-cookie": "^2.1.3",
+    "medium-editor": "^5.23.0",
+    "medium-editor-tables": "^0.6.1",
+    "metismenu": "^2.7.0",
+    "scrolltofixed": "^1.0.6",
+    "select2": "^4.0.3",
+    "toastr": "^2.1.2"
+  }
+}

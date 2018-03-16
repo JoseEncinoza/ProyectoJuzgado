@@ -1,0 +1,59 @@
+{% extends 'AssociatedWebBaseBundle::login.html.twig' %}
+
+{% block title %}{% trans %}dna_web_base.security.command.create_account{% endtrans %}{% endblock %}
+
+{% block content %}
+
+  <div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+      <div style="margin-bottom:20px;">
+        <img src="{{ asset('/web-logo-login.png') }}" height="150px" />
+      </div>
+
+    <h3>{% trans %}dna_web_base.security.command.create_account{% endtrans %}</h3>
+
+    {{ form_start(form, {'attr': {'class': 'm-t', 'role': 'form'}}) }}
+
+      {{ form_errors(form) }}
+
+      <div class="registration__controls">
+
+        <div class="form-group {% if form.user.description.vars.errors|length > 0 %}has-error{% endif %}">
+          <label for="{{ form.user.description.vars.id }}">{% trans %}dna_web_base.security.domain.your_name{% endtrans %}</label>
+        {{ form_widget(form.user.description, {'attr': {'class': 'form-control registration__control input-md'}}) }}
+          {{ form_errors(form.user.description) }}
+        </div>
+
+        <div class="form-group {% if form.user.email.vars.errors|length > 0 %}has-error{% endif %}">
+            <label for="{{ form.user.email.vars.id }}">{% trans %}dna_web_base.security.domain.email{% endtrans %}</label>
+          {{ form_widget(form.user.email, {'attr': {'class': 'form-control registration__control input-md'}}) }}
+            {{ form_errors(form.user.email) }}
+        </div>
+
+        <div class="form-group {% if form.password.first.vars.errors|length > 0 %}has-error{% endif %}">
+            <label for="{{ form.password.first.vars.id }}">{% trans %}dna_web_base.security.domain.password{% endtrans %}</label>
+          {{ form_widget(form.password.first, {'attr': {'class': 'form-control registration__control input-md'}}) }}
+            {{ form_errors(form.password.first) }}
+        </div>
+
+        <div class="form-group {% if form.password.second.vars.errors|length > 0 %}has-error{% endif %}">
+            <label for="{{ form.password.second.vars.id }}">{% trans %}dna_web_base.security.command.repeat_password{% endtrans %}</label>
+          {{ form_widget(form.password.second, {'attr': {'class': 'form-control registration__control input-md'}}) }}
+            {{ form_errors(form.password.second) }}
+          </div>
+
+      </div>
+
+      {{ form_widget(form.user.save, {'label_format': 'dna_web_base.security.command.create_account', 'attr': {'class': 'btn btn-primary btn-lg'}}) }}
+
+    {{ form_end(form) }}
+
+      <hr />
+
+      <p class="text-muted text-center">{% trans %}dna_web_base.security.domain.already_have_an_account{% endtrans %}</p>
+      <a href="{{ path('dna.web.base.security.login') }}" class="btn btn-sm btn-white btn-bloc">{% trans %}dna_web_base.security.command.sign_in{% endtrans %}</a>
+
+    </div>
+  </div>
+
+{% endblock %}

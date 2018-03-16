@@ -1,0 +1,23 @@
+.topbar {
+  font-size: 11px;
+
+  &__divider-vertical {
+    height: 10px;
+    margin: 15px 0px;
+    border-left: 1px solid #424242;
+  }
+
+  i {
+    font-size:14px;
+  }
+}
+
+
+/* Portrait phones and smaller */
+@media (max-width: 768px) {
+  .topbar {
+    li.topbar__divider-vertical {
+      display: none;
+    }
+  }
+}

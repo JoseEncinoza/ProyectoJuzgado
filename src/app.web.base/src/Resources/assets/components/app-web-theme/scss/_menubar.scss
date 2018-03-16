@@ -1,0 +1,66 @@
+.menubar {
+  margin-bottom: $navbar-margin-bottom;
+  font-size: 13px;
+  font-weight: bold;
+
+  &__logo {
+    float: left !important;
+  }
+
+  &__menu-small {
+    display:none;
+  }
+
+  ul {
+    display: inline-block;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      color: #666;
+      padding: 15px 15px;
+      background-color: #fff;
+
+      &:hover {
+        color: $brand-primary;
+        background-color: #fff;
+      }
+
+      &:active, &:visited {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+}
+
+
+/* Portrait phones and smaller */
+@media (max-width: 768px) {
+  .menubar {
+    text-align: center;
+
+    &__logo {
+      clear: both;
+      float: none !important;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    &__menu {
+      // float: left !important;
+      display:none;
+    }
+
+    &__menu-small {
+      display:block;
+    }
+  }
+}

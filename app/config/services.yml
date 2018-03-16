@@ -1,0 +1,45 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        # automatically injects dependencies in your services
+        autowire: true
+        # automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true
+        # this means you cannot fetch services directly from the container via $container->get()
+        # if you need to do this, you can override this setting on individual services
+        public: false
+
+    # this creates a service per class whose id is the fully-qualified class name
+
+    # Admin authenticator
+    dna_admin_authenticator:
+        class: Dna\Common\Identity\Authenticator\EmailCredentialAuthenticator
+        arguments:
+            $applicationId: 1
+            $loginRoute: 'dna.admin.base.security.login'
+            $defaultLoginSuccessRoute: 'dna.admin.base.default.index.locale'
+
+    # Web authenticator
+    dna_web_authenticator:
+        class: Dna\Common\Identity\Authenticator\EmailCredentialAuthenticator
+        arguments:
+            $applicationId: 2
+            $loginRoute: 'dna.web.base.security.login'
+            $defaultLoginSuccessRoute: 'dna.web.base.default.index.locale'
+
+    # Public storage
+    dna_core_storage_public_adapter:
+        class: League\Flysystem\Adapter\Local
+        arguments:
+            $root: '%kernel.project_dir%/%dna_data_folder%/public/'
+
+    # Private storage
+    dna_core_storage_private_adapter:
+        class: League\Flysystem\Adapter\Local
+        arguments:
+            $root: '%kernel.project_dir%/%dna_data_folder%/private/'

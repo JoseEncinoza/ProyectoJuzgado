@@ -1,0 +1,58 @@
+.section {
+  background: rgba(245, 245, 245, .9);
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 100;
+    margin: 15px 0;
+  }
+
+  &__tabs {
+
+    ul {
+      display: inline-block;
+    }
+
+    li {
+      display: inline-block;
+
+      a.tab {
+        color: #666;
+        padding: 0px 20px;
+        font-size: 13px;
+
+        &:hover {
+          color: $brand-primary;
+          background-color: transparent;
+        }
+
+        &:active, &:visited, &:focus {
+          background-color: transparent;
+        }
+      }
+
+      a {
+        font-size: 13px;
+        padding: 5px 10px;
+
+        &:hover, &:focus {
+          background-color: $btn-primary-border;
+        }
+      }
+
+      &.current a {
+        color: #bbb;
+        cursor: default;
+        // padding: 5px 10px;
+
+        &:hover, &:focus {
+          color: #bbb;
+        }
+      }
+
+    }
+
+  }
+
+}

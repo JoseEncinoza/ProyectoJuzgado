@@ -1,0 +1,32 @@
+{% extends 'AppWebBaseBundle::fullpagebox.html.twig' %}
+
+{% block title %}{% trans %}dna_admin_base.security.command.sign_in{% endtrans %}{% endblock %}
+
+{% block content %}
+
+  <h1 class="login__title">{% trans %}dna_admin_base.security.command.sign_in{% endtrans %}</h1>
+
+  <form role="form" action="{{ path('dna.web.base.security.login_check') }}" method="post">
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error|trans({}, 'security') }}</div>
+    {% endif %}
+
+    <div class="login__credentials">
+      {% block loginContent %}{% endblock %}
+    </div>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    {# If you want to control the URL the user is redirected to on success (more details below) #}
+    {# <input type="hidden" name="_target_path" value="{{ path('dna.admin.base.default.index') }}" /> #}
+    <button type="submit" class="btn btn-primary btn-lg login__button">{% trans %}dna_admin_base.security.command.sign_in{% endtrans %}</button>
+
+    <hr class="login__separator" />
+
+    <p class="login__create_account_label">{% trans %}dna_admin_base.security.domain.dont_have_an_account{% endtrans %}</p>
+
+    <a href="{{ path('dna.web.base.users.register') }}" class="login__create_account_link">{% trans %}dna_admin_base.security.command.create_account{% endtrans %}</a>
+
+  </form>
+
+{% endblock %}

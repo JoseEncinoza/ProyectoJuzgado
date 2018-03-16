@@ -1,0 +1,42 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: '%env(DNA_DATABASE_HOST)%'
+    database_port: '%env(DNA_DATABASE_PORT)%'
+    database_name: '%env(DNA_DATABASE_NAME)%'
+    database_user: '%env(DNA_DATABASE_USER)%'
+    database_password: '%env(DNA_DATABASE_PASSWORD)%'
+    mailer_transport: '%env(DNA_MAILER_TRANSPORT)%'
+    mailer_host: '%env(DNA_MAILER_HOST)%'
+    mailer_user: '%env(DNA_MAILER_USER)%'
+    mailer_password: '%env(DNA_MAILER_PASSWORD)%'
+    secret: ThisTokenIsNotSoSecretChangeIt
+    locale: '%env(DNA_LOCALE)%'
+    locales:
+        admin: '%admin.locales%'
+        web: '%web.locales%'
+    dna_data_folder: '%env(DNA_DATA_FOLDER)%'
+    admin:
+        head_title: 'Juzgado Admin'
+        authentication: email
+    web:
+        head_title: Juzgado
+        authentication: email
+    user_profile_base:
+        enabled: true
+        position: 1
+    user_profile_change_password:
+        enabled: true
+        position: 2
+    mail_from: '%env(DNA_MAIL_FROM)%'
+    name_from: '%env(DNA_NAME_FROM)%'
+    app_name: '%env(APP_NAME)%'
+    router.request_context.host: '%env(APP_URL_HOST)%'
+    router.request_context.scheme: '%env(APP_SCHEME_HOST)%'
+    wkhtmltopdf_path: wkhtmltopdf
+    dna_admin_notifications_enabled: '%env(DNA_ADMIN_NOTIFICATIONS_ENABLED)%'
+    dna_admin_notifications_ajax_enabled: '%env(DNA_ADMIN_NOTIFICATIONS_AJAX_ENABLED)%'
+    dna_admin_alerts_enabled: '%env(DNA_ADMIN_ALERTS_ENABLED)%'
+    dna_admin_messages_ajax_enabled: '%env(DNA_ADMIN_MESSAGES_AJAX_ENABLED)%'
+    juzgado_common_sentencia:
+        porcentaje_pago_voluntario: 50
+    dna_admin_message_send_to_mails: '%env(DNA_ADMIN_MESSAGE_SEND_TO_MAILS)%'

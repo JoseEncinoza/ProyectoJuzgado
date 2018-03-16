@@ -1,0 +1,68 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 14
+        Dna\Common\Identity\Entity\EmailCredential:
+            algorithm: bcrypt
+            cost: 14
+        Dna\Common\Identity\Entity\User:
+            algorithm: bcrypt
+            cost: 14
+
+
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        dna_admin:
+            id: Dna\Common\Identity\UserProvider\EmailCredentialUserProvider
+
+        dna_web:
+            id: Dna\Common\Identity\UserProvider\EmailCredentialUserProvider
+
+    firewalls:
+
+        # Disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        # Admin
+        admin:
+            pattern:   ^/[a-z]{2}/admin/
+            anonymous: ~
+            provider: dna_admin
+
+            # provider: dna_admin
+            guard:
+                authenticators:
+                    - dna_admin_authenticator
+
+            logout:
+                # The route name the user can go to in order to logout
+                path: dna.admin.base.security.logout
+                # The name of the route to redirect to after logging out
+                target: dna.admin.base.default.index.locale
+
+        # Web
+        web:
+            pattern:   ^/[a-z]{2}/
+            anonymous: ~
+            provider: dna_web
+
+            # provider: dna_web
+            guard:
+                authenticators:
+                    - dna_web_authenticator
+
+            logout:
+                # The route name the user can go to in order to logout
+                path: dna.web.base.security.logout
+                # The name of the route to redirect to after logging out
+                target: dna.web.base.default.index.locale
+
+    access_control:
+        - { path: '^/[a-z]{2}/admin/security/', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/[a-z]{2}/admin/', roles: IS_AUTHENTICATED_FULLY }

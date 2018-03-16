@@ -1,0 +1,142 @@
+{
+    "name": "mlp/juzgado",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "Juzgado\\Admin\\Base\\": "vendor/mlp/juzgado.admin.base/src/",
+            "Juzgado\\Web\\Base\\": "vendor/mlp/juzgado.web.base/src/",
+            "Juzgado\\Admin\\Vehiculo\\": "vendor/mlp/juzgado.admin.vehiculo/src/",
+            "Juzgado\\Web\\Vehiculo\\": "vendor/mlp/juzgado.web.vehiculo/src/",
+            "Juzgado\\Common\\Vehiculo\\": "vendor/mlp/juzgado.common.vehiculo/src/",
+            "Juzgado\\Admin\\Persona\\": "vendor/mlp/juzgado.admin.persona/src/",
+            "Juzgado\\Web\\Persona\\": "vendor/mlp/juzgado.web.persona/src/",
+            "Juzgado\\Common\\Persona\\": "vendor/mlp/juzgado.common.persona/src/",
+            "Juzgado\\Admin\\Empleado\\": "vendor/mlp/juzgado.admin.empleado/src/",
+            "Juzgado\\Common\\Empleado\\": "vendor/mlp/juzgado.common.empleado/src/",
+            "Juzgado\\Admin\\Expediente\\": "vendor/mlp/juzgado.admin.expediente/src/",
+            "Juzgado\\Common\\Expediente\\": "vendor/mlp/juzgado.common.expediente/src/",
+            "Juzgado\\Admin\\Acta\\": "vendor/mlp/juzgado.admin.acta/src/",
+            "Juzgado\\Common\\Acta\\": "vendor/mlp/juzgado.common.acta/src/",
+            "Juzgado\\Admin\\Feriado\\": "vendor/mlp/juzgado.admin.feriado/src/",
+            "Juzgado\\Common\\Feriado\\": "vendor/mlp/juzgado.common.feriado/src/",
+            "Juzgado\\Admin\\LibreDeuda\\": "vendor/mlp/juzgado.admin.libre_deuda/src/",
+            "Juzgado\\Common\\LibreDeuda\\": "vendor/mlp/juzgado.common.libre_deuda/src/",
+            "Juzgado\\Admin\\Notificacion\\": "vendor/mlp/juzgado.admin.notificacion/src/",
+            "Juzgado\\Common\\Notificacion\\": "vendor/mlp/juzgado.common.notificacion/src/",
+            "Juzgado\\Admin\\Sentencia\\": "vendor/mlp/juzgado.admin.sentencia/src/",
+            "Juzgado\\Common\\Sentencia\\": "vendor/mlp/juzgado.common.sentencia/src/",
+            "Dna\\Web\\Base\\": "vendor/e-binaria/dna.web.base/src",
+            "Dna\\Core\\Ui\\Notification\\": "vendor/e-binaria/dna.core.ui.notification/src",
+            "Dna\\Core\\Ui\\Menu\\": "vendor/e-binaria/dna.core.ui.menu/src",
+            "Dna\\Core\\Ui\\DataGrid\\": "vendor/e-binaria/dna.core.ui.datagrid/src",
+            "Dna\\Core\\Storage\\": "vendor/e-binaria/dna.core.storage/src",
+            "Dna\\Core\\Renderer\\": "vendor/e-binaria/dna.core.renderer/src",
+            "Dna\\Core\\Media\\": "vendor/e-binaria/dna.core.media/src",
+            "Dna\\Core\\Markdown\\": "vendor/e-binaria/dna.core.markdown/src",
+            "Dna\\Core\\Locale\\": "vendor/e-binaria/dna.core.locale/src",
+            "Dna\\Core\\Email\\": "vendor/e-binaria/dna.core.email/src",
+            "Dna\\Core\\Data\\": "vendor/e-binaria/dna.core.data/src",
+            "Dna\\Core\\Bundle\\": "vendor/e-binaria/dna.core.bundle/src",
+            "Dna\\Core\\Audit\\": "vendor/e-binaria/dna.core.audit/src",
+            "Dna\\Common\\Template\\": "vendor/e-binaria/dna.common.template/src",
+            "Dna\\Common\\Setting\\": "vendor/e-binaria/dna.common.setting/src",
+            "Dna\\Common\\Notification\\": "vendor/e-binaria/dna.common.notification/src",
+            "Dna\\Common\\Message\\": "vendor/e-binaria/dna.common.message/src",
+            "Dna\\Common\\Identity\\": "vendor/e-binaria/dna.common.identity/src",
+            "Dna\\Common\\Email\\": "vendor/e-binaria/dna.common.email/src",
+            "Dna\\Common\\Crontask\\": "vendor/e-binaria/dna.common.crontask/src",
+            "Dna\\Admin\\Template\\": "vendor/e-binaria/dna.admin.template/src",
+            "Dna\\Admin\\Setting\\": "vendor/e-binaria/dna.admin.setting/src",
+            "Dna\\Admin\\Notification\\": "vendor/e-binaria/dna.admin.notification/src",
+            "Dna\\Admin\\Message\\": "vendor/e-binaria/dna.admin.message/src",
+            "Dna\\Admin\\Crontask\\": "vendor/e-binaria/dna.admin.crontask/src",
+            "Dna\\Admin\\Base\\Notification\\": "vendor/e-binaria/dna.admin.base.notification/src",
+            "Dna\\Admin\\Base\\": "vendor/e-binaria/dna.admin.base/src",
+            "Dna\\Admin\\Audit\\": "vendor/e-binaria/dna.admin.audit/src",
+            "Dna\\Adapter\\Tcpdf\\": "vendor/e-binaria/dna.adapter.tcpdf/src",
+            "Dna\\Adapter\\Select2\\": "vendor/e-binaria/dna.adapter.select2/src",
+            "Dna\\Adapter\\Phpexcel\\": "vendor/e-binaria/dna.adapter.phpexcel/src",
+            "Dna\\Adapter\\Htmltopdf\\": "vendor/e-binaria/dna.adapter.htmltopdf/src"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\Web\\Base\\": "src/app.web.base/src/"
+        },
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
+    },
+    "config": {
+        "secure-http": false,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "php": ">=7.0",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/distribution-bundle": "^5.0.19",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "symfony/swiftmailer-bundle": "^2.3.10",
+        "symfony/symfony": "3.3.*",
+        "twig/twig": "^1.0||^2.0",
+        "friendsofsymfony/jsrouting-bundle": "1.6.0",
+        "stof/doctrine-extensions-bundle": "1.3.0",
+        "tecnickcom/tcpdf": "~6.2",
+        "phpoffice/phpexcel": "~1.8.1",
+        "ext-intl": "*",
+        "twig/extensions": "^1.5",
+        "mtdowling/cron-expression": "1.2.0",
+        "ext-pdo": "*",
+        "pagerfanta/pagerfanta": "^1.0",
+        "erusev/parsedown": "^1.5",
+        "ezyang/htmlpurifier": "^4.7",
+        "ext-gd": "*",
+        "imagine/Imagine": "^0.7.1",
+        "league/flysystem": "^1.0"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "../juzgado-data/var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": null
+    }
+}

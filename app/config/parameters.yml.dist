@@ -1,0 +1,68 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:     '%env(DNA_DATABASE_HOST)%'
+    database_port:     '%env(DNA_DATABASE_PORT)%'
+    database_name:     '%env(DNA_DATABASE_NAME)%'
+    database_user:     '%env(DNA_DATABASE_USER)%'
+    database_password: '%env(DNA_DATABASE_PASSWORD)%'
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport:  '%env(DNA_MAILER_TRANSPORT)%'
+    mailer_host:       '%env(DNA_MAILER_HOST)%'
+    mailer_user:       '%env(DNA_MAILER_USER)%'
+    mailer_password:   '%env(DNA_MAILER_PASSWORD)%'
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # Default locale
+    locale:             '%env(DNA_LOCALE)%'
+
+    # Locales
+    locales: {admin: '%admin.locales%', web: '%web.locales%'}
+
+    # Data folder
+    dna_data_folder:    '%env(DNA_DATA_FOLDER)%'
+
+    # Admin
+    admin:
+        head_title: 'Juzgado Admin'
+        authentication: 'email'
+
+    # Web
+    web:
+        head_title: 'Juzgado'
+        authentication: 'email'
+
+    # User profile item - Basic information
+    user_profile_base:
+        enabled: true
+        position: 1
+
+    # User profile item - Change password
+    user_profile_change_password:
+        enabled: true
+        position: 2
+
+    mail_from: '%env(DNA_MAIL_FROM)%'
+    name_from: '%env(DNA_NAME_FROM)%'
+
+    app_name: '%env(APP_NAME)%'
+
+    router.request_context.host: '%env(APP_URL_HOST)%'
+    router.request_context.scheme: '%env(APP_SCHEME_HOST)%'
+
+    # wkhtmltopdf
+    wkhtmltopdf_path: wkhtmltopdf  #'xvfb-run /usr/bin/wkhtmltopdf'
+
+    dna_admin_notifications_enabled: '%env(DNA_ADMIN_NOTIFICATIONS_ENABLED)%'
+    dna_admin_notifications_ajax_enabled: '%env(DNA_ADMIN_NOTIFICATIONS_AJAX_ENABLED)%'
+    dna_admin_alerts_enabled: '%env(DNA_ADMIN_ALERTS_ENABLED)%'
+    dna_admin_messages_ajax_enabled: '%env(DNA_ADMIN_MESSAGES_AJAX_ENABLED)%'
+    dna_admin_message_send_to_mails: '%env(DNA_ADMIN_MESSAGE_SEND_TO_MAILS)%'
+
+    juzgado_common_sentencia:
+        porcentaje_pago_voluntario: 50

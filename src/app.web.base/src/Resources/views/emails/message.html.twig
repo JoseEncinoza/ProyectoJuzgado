@@ -1,0 +1,84 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ subject }}</title>
+    <style type="text/css">
+        h1 {
+            color: #666;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        table table {
+            width: 600px !important;
+        }
+
+        table div + div { /* main content */
+            width: 100%;
+            float: left;
+        }
+
+        p.footer {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 630px) {
+            table table {
+                width: 96% !important;
+            }
+
+            table div {
+                float: none !important;
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #eee;font-family:Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 14px; line-height: 18px">
+<table cellpadding=0 cellspacing=0 style="width: 100%;">
+    <tr>
+        <td style="padding: 12px 2%;">
+            <table cellpadding=0 cellspacing=0 style="margin: 0 auto; background: #fff; width: 96%;">
+                <tr>
+                    <td style="background-color: #1ab394;padding: 12px 2%;text-align: center;"><img src="embed-app_logo"
+                                    alt="app_logo"
+                                    border="0"
+                                    height="100px"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px 2%;">
+                        <div>
+                            <h1><strong>{% trans %}messages.domain.from{% endtrans %}</strong>: {{ fromUser.description }}</h1>
+                            <h1><strong>{% trans %}messages.domain.subject{% endtrans %}</strong>: {{ subject }}</h1>
+                        </div>
+                        <div>
+                            <p>
+                                {% if format == 'txt' %}
+                                    {{ messageBody }}
+                                {% elseif format == 'html' %}
+                                    {{ messageBody | raw }}
+                                {% else %} {# 'md' #}
+                                    {{ messageBody | nl2br | md2html }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                {% if app_link is defined %}
+                <tr>
+                    <td style="background-color: #eee;"><p class="footer">
+                            {% trans %}messages.domain.app_link{% endtrans %} <a
+                                    href="{{ url(app_link) }}">{{ url(app_link) }}</a>
+                        </p></td>
+                </tr>
+                {% endif %}
+            </table>
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'AppWebBaseBundle::clean.html.twig' %}
+
+{% block body %}class="fullpagebox__body"{% endblock %}
+
+{% block layout %}
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="fullpagebox__box">
+
+        <img src="{{ asset('/assets/static/app.web.base/img/logo.png') }}" border="0" width="75px" height="75px" />
+
+        {# Custom content #}
+        {% block content %}{% endblock %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

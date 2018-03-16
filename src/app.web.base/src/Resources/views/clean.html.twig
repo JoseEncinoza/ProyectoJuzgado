@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+  <title>{% block title %}{% endblock %} | {{ web.head_title }}</title>
+  {% include 'DnaWebBaseBundle::common/head.html.twig' %}
+  <script>
+    var locale = '{{ app.request.locale }}';
+    var dna = {
+      'locale': {% if (app.request.locale == 'en') %}'en-US'{% else %}'es-AR'{% endif %},
+      'language': '{{ app.request.locale }}'
+    }
+  </script>
+  {% if js_module is defined %}
+    <script src="{{ asset('/assets/modules/module-'~js_module~'.js')}}"></script>
+  {% else %}
+    <script src="{{ asset('/assets/modules/module-dna-web-base-shared.js') }}"></script>
+  {% endif %}
+  <script src="{{ asset('/assets/modules/module-dna-web-newsletter-shared.js') }}"></script>
+  <script src="{{ asset('/bundles/fosjsrouting/js/router.js') }}"></script>
+  <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+</head>
+<body {% block body %}{% endblock %}>
+
+  {% block layout %}{% endblock %}
+
+  {% block javascript %}{% endblock %}
+
+</body>
+</html>
